@@ -40,7 +40,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          key_path: ~/.ssh/id_rsa
-          timeout: 60s
+          key_path: ${{ secrets.SSH_KEY }}
           script: |
            whoami
+           ls -al
