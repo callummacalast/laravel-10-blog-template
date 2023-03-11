@@ -40,3 +40,4 @@ jobs:
           remote-user: jrdev.co.uk
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: ~/
+          rsync-options: --human-readable --dry-run
