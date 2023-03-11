@@ -34,8 +34,9 @@ jobs:
       - name: Directory Permissions
         run: chmod 755 -R storage bootstrap/cache
       - name: Deploy to Server
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/web-deploy@v1
         with:
-          server: ${{ secrets.LARAVEL_SITE_SERVER}}
-          username: ${{ secrets.LARAVEL_SITE_USER}}
-          password: ${{ secrets.LARAVEL_SITE_PASS}}
+          target-server: ${{ secrets.SSH_HOST }}
+          remote-user: ${{ secrets.SSH_USERNAME }}
+          private-ssh-key: ${{ secrets.SSH_KEY }}
+          destination-path: ~/
