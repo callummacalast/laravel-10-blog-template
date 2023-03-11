@@ -40,11 +40,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script_stop: true
           script: |
-            cd app
-            git pull
-            npm ci
-            npm run prod
-            composer i
-            php artisan migrate --force
+           whoami
