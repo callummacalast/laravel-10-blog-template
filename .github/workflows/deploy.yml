@@ -42,6 +42,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script_stop: true
           script: |
+            cd app
             git pull
             npm ci
             npm run prod
