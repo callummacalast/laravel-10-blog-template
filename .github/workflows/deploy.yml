@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to Server
         uses: SamKirkland/web-deploy@v1
         with:
-          target-server: ${{ secrets.SSH_HOST }}
-          remote-user: ${{ secrets.SSH_USERNAME }}
+          target-server: ssh.gb.stackcp.com
+          remote-user: jrdev.co.uk
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: ~/
